@@ -16,8 +16,8 @@ namespace NearApp.Controllers
         [Authorize(Roles = "admin, user")]
         public IActionResult Index()
         {
-            string role = User.FindFirst(x => x.Type == ClaimsIdentity.DefaultRoleClaimType).Value;
-            return Content($"ваша роль: {role}");
+           // string role = User.FindFirst(x => x.Type == ClaimsIdentity.DefaultRoleClaimType).Value;
+            return View();
         }
         [Authorize(Roles = "admin")]
         public IActionResult About()
